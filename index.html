@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>戎耀云岭·薪火相传 - 退伍大学生红色国防教育创新平台</title>
+    <!-- 引入外部资源 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- 配置Tailwind自定义主题 -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#D81E06', // 中国红（主色）
+                        secondary: '#0A3D62', // 藏青（辅助色）
+                        accent: '#FFC107', // 金黄（强调色）
+                        neutral: '#F5F5F5', // 浅灰（背景色）
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .text-shadow {
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            }
+            .bg-blur {
+                backdrop-filter: blur(8px);
+            }
+            .btn-hover-effect {
+                transition: all 0.3s ease;
+            }
+            .btn-hover-effect:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 4px 8px rgba(216, 30, 6, 0.2);
+            }
+        }
+    </style>
+</head>
+<body class="font-sans bg-neutral text-gray-800">
+    <!-- 导航栏 -->
+    <header class="fixed w-full top-0 z-50 transition-all duration-300" id="navbar">
+        <nav class="bg-primary/95 text-white shadow-lg">
+            <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+                <a href="#" class="flex items-center space-x-2">
+                    <i class="fa fa-flag text-accent text-2xl"></i>
+                    <span class="text-xl font-bold">戎耀云岭·薪火相传</span>
+                </a>
+                
+                <!-- 桌面端导航 -->
+                <div class="hidden md:flex space-x-6">
+                    <a href="#policy" class="hover:text-accent transition-colors">入伍政策</a>
+                    <a href="#red-stories" class="hover:text-accent transition-colors">红色故事</a>
+                    <a href="#military-heroes" class="hover:text-accent transition-colors">军人代表</a>
+                    <a href="#skill-training" class="hover:text-accent transition-colors">技能学习</a>
+                    <a href="#exam-promotion" class="hover:text-accent transition-colors">考学提干</a>
+                    <a href="#research-courses" class="hover:text-accent transition-colors">研学课程</a>
+                </div>
+                
+                <!-- 移动端菜单按钮 -->
+                <button class="md:hidden text-white text-xl" id="menuBtn">
+                    <i class="fa fa-bars"></i>
+                </button>
+            </div>
+            
+            <!-- 移动端导航菜单 -->
+            <div class="md:hidden hidden bg-primary/98 w-full" id="mobileMenu">
+                <div class="container mx-auto px-4 py-2 flex flex-col space-y-3">
+                    <a href="#policy" class="py-2 hover:text-accent transition-colors">入伍政策</a>
+                    <a href="#red-stories" class="py-2 hover:text-accent transition-colors">红色故事</a>
+                    <a href="#military-heroes" class="py-2 hover:text-accent transition-colors">军人代表</a>
+                    <a href="#skill-training" class="py-2 hover:text-accent transition-colors">技能学习</a>
+                    <a href="#exam-promotion" class="py-2 hover:text-accent transition-colors">考学提干</a>
+                    <a href="#research-courses" class="py-2 hover:text-accent transition-colors">研学课程</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- 英雄区 -->
+    <section class="pt-24 pb-16 bg-cover bg-center" style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('zhuti.jpg');">
+        <div class="container mx-auto px-4 text-center text-white">
+            <h1 class="text-[clamp(2rem,5vw,4rem)] font-bold mb-6 text-shadow">戎耀云岭·薪火相传</h1>
+            <p class="text-[clamp(1rem,2vw,1.5rem)] mb-8 max-w-3xl mx-auto">
+                退伍大学生红色国防教育创新平台，传承红色基因，筑牢国防根基
+            </p>
+            <a href="#research-courses" class="bg-accent text-secondary px-8 py-3 rounded-lg font-bold hover:bg-accent/90 transition-colors shadow-lg">
+                预约研学课程
+            </a>
+        </div>
+    </section>
+
+    <!-- 板块一：入伍政策解读 -->
+    <section id="policy" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-primary mb-4">大学生应征入伍政策解读</h2>
+                <div class="w-20 h-1 bg-accent mx-auto"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- 男兵要求 -->
+                <div class="bg-neutral rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow">
+                    <div class="flex items-center mb-4">
+                        <i class="fa fa-user text-primary text-2xl mr-3"></i>
+                        <h3 class="text-xl font-bold text-secondary">男兵征集要求</h3>
+                    </div>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start">
+                            <i class="fa fa-check-circle text-primary mt-1 mr-2"></i>
+                            <span><strong>年龄要求：</strong>年满18至22周岁，普通高等学校毕业生可放宽至24周岁</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check-circle text-primary mt-1 mr-2"></i>
+                            <span><strong>学历要求：</strong>高中（含中专、职高、技校）毕业及以上文化程度</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check-circle text-primary mt-1 mr-2"></i>
+                            <span><strong>身体条件：</strong>身高160cm以上，体重不超过标准体重的30%，不低于标准体重的15%</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check-circle text-primary mt-1 mr-2"></i>
+                            <span><strong>视力要求：</strong>右眼裸眼视力不低于4.6，左眼裸眼视力不低于4.5</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check-circle text-primary mt-1 mr-2"></i>
+                            <span><strong>政治条件：</strong>符合《征兵政治审查工作规定》相关要求</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 女兵要求 -->
+                <div class="bg-neutral rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow">
+                    <div class="flex items-center mb-4">
+                        <i class="fa fa-user-female text-primary text-2xl mr-3"></i>
+                        <h3 class="text-xl font-bold text-secondary">女兵征集要求</h3>
+                    </div>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start">
+                            <i class="fa fa-check-circle text-primary mt-1 mr-2"></i>
+                            <span><strong>年龄要求：</strong>年满18至22周岁，普通高等学校在校生可放宽至20周岁</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check-circle text-primary mt-1 mr-2"></i>
+                            <span><strong>学历要求：</strong>普通高等学校全日制应届毕业生、在校生和普通高中应届毕业生</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check-circle text-primary mt-1 mr-2"></i>
+                            <span><strong>身体条件：</strong>身高158cm以上，体重不超过标准体重的20%，不低于标准体重的15%</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check-circle text-primary mt-1 mr-2"></i>
+                            <span><strong>视力要求：</strong>右眼裸眼视力不低于4.6，左眼裸眼视力不低于4.5</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check-circle text-primary mt-1 mr-2"></i>
+                            <span><strong>政治条件：</strong>符合《征兵政治审查工作规定》相关要求</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 板块二：云南红色故事（新增查看全部按钮） -->
+    <section id="red-stories" class="py-16 bg-secondary/5">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-primary mb-4">云南红色故事</h2>
+                <div class="w-20 h-1 bg-accent mx-auto"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+                <!-- 西南联大红色故事 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <img src="xinanlianda.jpg" alt="西南联大旧址" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-secondary mb-2">西南联大的红色记忆</h3>
+                        <p class="text-gray-700 mb-3">
+                            国立西南联合大学是抗日战争时期由北大、清华、南开南迁昆明合组而成。在艰苦岁月中，联大师生坚守爱国精神，留下宝贵红色基因。
+                        </p>
+                        <!-- 点击展开按钮 -->
+                        <button onclick="toggleStory('story-1')" class="text-primary font-medium flex items-center">
+                            查看详细故事 <i class="fa fa-angle-down ml-1"></i>
+                        </button>
+                        <!-- 详细内容（默认隐藏） -->
+                        <div id="story-1" class="hidden mt-4 text-gray-600 space-y-2">
+                            <p>抗战爆发后，华北高校被迫南迁，三校师生历经艰险徒步南下，最终在昆明组建西南联大。在敌机轰炸、物资匮乏、生活极端艰苦的条件下，联大坚持办学八年。</p>
+                            <p>闻一多、朱自清、华罗庚、吴大猷等一大批学者坚守讲台，坚持“读书不忘救国”，许多青年学生投笔从戎，奔赴抗日前线，用知识与热血守护家国。</p>
+                            <p>西南联大不仅是中国教育史上的奇迹，更是一座象征民族不屈、爱国担当、坚韧不拔的红色精神丰碑。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 滇西抗战故事 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <img src="dianxi.jpg" alt="滇西抗战纪念馆" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-secondary mb-2">滇西抗战的峥嵘岁月</h3>
+                        <p class="text-gray-700 mb-3">
+                            滇西抗战是中国抗日战争中最为惨烈、悲壮的篇章之一，云南军民以血肉之躯筑起防线。
+                        </p>
+                        <button onclick="toggleStory('story-2')" class="text-primary font-medium flex items-center">
+                            查看详细故事 <i class="fa fa-angle-down ml-1"></i>
+                        </button>
+                        <div id="story-2" class="hidden mt-4 text-gray-600 space-y-2">
+                            <p>1942年，日军侵入滇西，怒江以西大片国土沦陷。为保卫西南大后方，中国远征军赴缅作战，在松山、腾冲、龙陵等地与日军展开殊死决战。</p>
+                            <p>腾冲是抗战中第一个收复的县城，战斗极为惨烈。松山战役更是被称为“东方绞肉机”，中国军人前赴后继，以巨大牺牲攻克日军坚固阵地。</p>
+                            <p>云南各族人民抢修滇缅公路、运送物资、支援前线，用生命打通抗战“输血管”，谱写了军民同心、共御外侮的壮丽史诗。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 扎西会议故事 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <img src="zhaxi.jpg" alt="扎西会议旧址" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-secondary mb-2">扎西会议的历史转折</h3>
+                        <p class="text-gray-700 mb-3">
+                            1935年，红军长征途经云南扎西，召开重要会议，成为中国革命历史的关键转折点。
+                        </p>
+                        <button onclick="toggleStory('story-3')" class="text-primary font-medium flex items-center">
+                            查看详细故事 <i class="fa fa-angle-down ml-1"></i>
+                        </button>
+                        <div id="story-3" class="hidden mt-4 text-gray-600 space-y-2">
+                            <p>遵义会议后，中央红军挥师入滇，1935年2月在云南扎西（今威信县）召开政治局扩大会议，史称“扎西会议”。</p>
+                            <p>会议完成了遵义会议后的中央领导调整，确定了新的战略方针，整编部队，为红军跳出包围圈、四渡赤水、胜利北上奠定了基础。</p>
+                            <p>扎西会议是红军长征途中一次“承前启后、转危为安”的重要会议，在云南红色历史上具有极其重要的地位。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 新增：查看全部红色故事按钮 -->
+            <div class="text-center">
+                <button class="bg-primary text-white px-8 py-3 rounded-lg font-bold btn-hover-effect flex items-center mx-auto" onclick="showAllStories()">
+                    <i class="fa fa-book mr-2"></i> 查看全部红色故事
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 板块三：新时代军人代表故事（新增查看全部按钮） -->
+    <section id="military-heroes" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-primary mb-4">新时代军人代表故事</h2>
+                <div class="w-20 h-1 bg-accent mx-auto"></div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <!-- 杜富国 -->
+                <div class="bg-neutral rounded-xl shadow-md text-center">
+                    <div class="h-48 bg-secondary flex items-center justify-center">
+                        <img src="dufuguo.jpg" alt="杜富国" class="w-32 h-32 rounded-full border-4 border-accent object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-secondary mb-2">杜富国</h3>
+                        <p class="text-gray-700 mb-2">“你退后，让我来！”</p>
+                        <span class="inline-block bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">排雷英雄</span>
+                        
+                        <button onclick="toggleHero('hero-1')" class="mt-4 text-primary font-medium">
+                            查看详细事迹
+                        </button>
+                        <div id="hero-1" class="hidden mt-4 text-gray-600 text-left space-y-2">
+                            <p>杜富国是南部战区陆军云南扫雷大队战士。在边境扫雷行动中，面对一枚加重手榴弹，他对战友喊出“你退后，让我来”。</p>
+                            <p>在进一步查明情况时突遇爆炸，他用身体护住战友，自己失去双手和双眼，同组战友安然无恙。</p>
+                            <p>杜富国用行动诠释了“一不怕苦、二不怕死”的战斗精神，是新时代最可爱的人。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 陈祥榕 -->
+                <div class="bg-neutral rounded-xl shadow-md text-center">
+                    <div class="h-48 bg-secondary flex items-center justify-center">
+                        <img src="chenxianrong.jpg" alt="陈祥榕" class="w-32 h-32 rounded-full border-4 border-accent object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-secondary mb-2">陈祥榕</h3>
+                        <p class="text-gray-700 mb-2">“清澈的爱，只为中国。”</p>
+                        <span class="inline-block bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">卫国戍边英雄</span>
+                        
+                        <button onclick="toggleHero('hero-2')" class="mt-4 text-primary font-medium">
+                            查看详细事迹
+                        </button>
+                        <div id="hero-2" class="hidden mt-4 text-gray-600 text-left space-y-2">
+                            <p>陈祥榕，2001年出生，2020年6月在边境斗争中英勇牺牲，年仅18岁。面对数倍于己的外军，他与战友们寸土不让。</p>
+                            <p>他在日记中写下“清澈的爱，只为中国”，成为亿万中国人心中最动人的誓言。</p>
+                            <p>他用最年轻的生命，捍卫了祖国领土完整，是新时代青年军人的杰出代表。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 肖思远 -->
+                <div class="bg-neutral rounded-xl shadow-md text-center">
+                    <div class="h-48 bg-secondary flex items-center justify-center">
+                        <img src="xiaosiyuan.jpg" alt="肖思远" class="w-32 h-32 rounded-full border-4 border-accent object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-secondary mb-2">肖思远</h3>
+                        <p class="text-gray-700 mb-2">“我们就是祖国的界碑。”</p>
+                        <span class="inline-block bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">卫国戍边英雄</span>
+                        
+                        <button onclick="toggleHero('hero-3')" class="mt-4 text-primary font-medium">
+                            查看详细事迹
+                        </button>
+                        <div id="hero-3" class="hidden mt-4 text-gray-600 text-left space-y-2">
+                            <p>肖思远在战斗中突围后，义无反顾返回营救战友，直至壮烈牺牲。</p>
+                            <p>他在日记中写道：“我们就是祖国的界碑，脚下的每一寸土地，都是祖国的领土。”</p>
+                            <p>他始终把使命扛在肩上，把生死置之度外，用热血践行军人誓言，永远守护祖国边疆。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 新增：查看全部军人故事按钮 -->
+            <div class="text-center">
+                <button class="bg-primary text-white px-8 py-3 rounded-lg font-bold btn-hover-effect flex items-center mx-auto" onclick="showAllHeroes()">
+                    <i class="fa fa-users mr-2"></i> 查看全部军人典型故事
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 板块四：部队士兵技能学习（免费版，新增查看全部按钮） -->
+    <section id="skill-training" class="py-16 bg-secondary/5">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-primary mb-4">部队士兵技能学习</h2>
+                <div class="w-20 h-1 bg-accent mx-auto"></div>
+                <p class="mt-4 text-gray-700 max-w-2xl mx-auto">
+                    提升综合素养，赋能军旅生涯，为退役军人就业创业打下坚实基础 <span class="text-primary font-bold">(全部课程免费)</span>
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <!-- 摄影培训课程 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300">
+                    <div class="relative">
+                        <img src="sheyin.jpg" alt="摄影培训课程" class="w-full h-48 object-cover">
+                        <div class="absolute top-4 right-4 bg-green-600 text-white px-3 py-1 rounded-lg font-bold">
+                            免费
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-secondary mb-2">摄影培训课程</h3>
+                        <p class="text-gray-700 mb-3">
+                            掌握专业摄影技巧，记录军旅生活，传播军营正能量
+                        </p>
+                        <button onclick="toggleSkill('skill-1')" class="text-primary font-medium flex items-center mb-4">
+                            查看课程详情 <i class="fa fa-angle-down ml-1"></i>
+                        </button>
+                        <div id="skill-1" class="hidden text-gray-600 space-y-2 mb-4">
+                            <ul class="list-disc list-inside space-y-1">
+                                <li>基础摄影理论：光圈、快门、ISO参数调节</li>
+                                <li>军旅摄影技巧：人物抓拍、场景构图、光影运用</li>
+                                <li>后期修图入门：Lightroom/Photoshop基础操作</li>
+                                <li>军营宣传摄影：新闻摄影、活动纪实拍摄规范</li>
+                            </ul>
+                            <p class="mt-2 text-sm text-gray-500">课程时长：3天（24课时），小班教学，手把手指导</p>
+                        </div>
+                        <button class="w-full bg-primary text-white py-2 rounded-lg hover:bg-primary/90 transition-colors" onclick="openModal('photography')">
+                            预约课程
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 新闻稿件培训课程 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300">
+                    <div class="relative">
+                        <img src="xinwen.jpg" alt="新闻稿件培训课程" class="w-full h-48 object-cover">
+                        <div class="absolute top-4 right-4 bg-green-600 text-white px-3 py-1 rounded-lg font-bold">
+                            免费
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-secondary mb-2">新闻稿件培训课程</h3>
+                        <p class="text-gray-700 mb-3">
+                            掌握新闻写作规范，提升军营宣传能力，讲好军人故事
+                        </p>
+                        <button onclick="toggleSkill('skill-2')" class="text-primary font-medium flex items-center mb-4">
+                            查看课程详情 <i class="fa fa-angle-down ml-1"></i>
+                        </button>
+                        <div id="skill-2" class="hidden text-gray-600 space-y-2 mb-4">
+                            <ul class="list-disc list-inside space-y-1">
+                                <li>新闻写作基础：消息、通讯、评论写作规范</li>
+                                <li>军旅新闻特点：真实、及时、正面宣传原则</li>
+                                <li>标题制作技巧：吸引眼球且符合军营宣传要求</li>
+                                <li>采访技巧：人物专访、事件调查方法</li>
+                                <li>投稿规范：军队媒体投稿格式与要求</li>
+                            </ul>
+                            <p class="mt-2 text-sm text-gray-500">课程时长：4天（32课时），含实战写作指导</p>
+                        </div>
+                        <button class="w-full bg-primary text-white py-2 rounded-lg hover:bg-primary/90 transition-colors" onclick="openModal('news')">
+                            预约课程
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 视频剪辑培训课程 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300">
+                    <div class="relative">
+                        <img src="shipin.jpg" alt="视频剪辑培训课程" class="w-full h-48 object-cover">
+                        <div class="absolute top-4 right-4 bg-green-600 text-white px-3 py-1 rounded-lg font-bold">
+                            免费
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-secondary mb-2">视频剪辑培训课程</h3>
+                        <p class="text-gray-700 mb-3">
+                            掌握短视频制作技能，打造军营宣传精品内容
+                        </p>
+                        <button onclick="toggleSkill('skill-3')" class="text-primary font-medium flex items-center mb-4">
+                            查看课程详情 <i class="fa fa-angle-down ml-1"></i>
+                        </button>
+                        <div id="skill-3" class="hidden text-gray-600 space-y-2 mb-4">
+                            <ul class="list-disc list-inside space-y-1">
+                                <li>剪辑软件基础：剪映/PR入门操作</li>
+                                <li>视频剪辑逻辑：叙事结构、节奏把控</li>
+                                <li>军营短视频制作：选题、拍摄、剪辑全流程</li>
+                                <li>字幕、配乐、特效添加技巧</li>
+                                <li>军营宣传视频发布规范</li>
+                            </ul>
+                            <p class="mt-2 text-sm text-gray-500">课程时长：5天（40课时），含实操演练+作品点评</p>
+                        </div>
+                        <button class="w-full bg-primary text-white py-2 rounded-lg hover:bg-primary/90 transition-colors" onclick="openModal('video')">
+                            预约课程
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 新增：查看全部技能课程按钮 -->
+            <div class="text-center">
+                <button class="bg-primary text-white px-8 py-3 rounded-lg font-bold btn-hover-effect flex items-center mx-auto" onclick="showAllSkills()">
+                    <i class="fa fa-graduation-cap mr-2"></i> 查看全部技能课程
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 板块五：大学生士兵考学提干 -->
+    <section id="exam-promotion" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-primary mb-4">大学生士兵考学提干</h2>
+                <div class="w-20 h-1 bg-accent mx-auto"></div>
+                <p class="mt-4 text-gray-700 max-w-2xl mx-auto">
+                    政策解读 + 专业辅导，助力大学生士兵成长成才
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 mb-8">
+                <!-- 考学政策 -->
+                <div class="bg-neutral rounded-xl shadow-md p-6">
+                    <div class="flex items-center mb-6">
+                        <i class="fa fa-graduation-cap text-primary text-3xl mr-4"></i>
+                        <h3 class="text-xl font-bold text-secondary">大学生士兵考学政策</h3>
+                    </div>
+                    <button onclick="toggleExam('exam-1')" class="text-primary font-medium flex items-center mb-4">
+                        查看详细政策 <i class="fa fa-angle-down ml-1"></i>
+                    </button>
+                    <div id="exam-1" class="hidden text-gray-700 space-y-3">
+                        <div class="bg-white p-4 rounded-lg">
+                            <h4 class="font-bold text-secondary mb-2">报考条件</h4>
+                            <ul class="list-disc list-inside space-y-1">
+                                <li>入伍前为普通高等学校全日制专科以上毕业生、在校生或高中毕业生</li>
+                                <li>年龄不超过22周岁（大专毕业生放宽至23周岁，本科及以上毕业生放宽至24周岁）</li>
+                                <li>义务兵考生必须服现役满1年，士官考生必须服现役满2年、不超过3年</li>
+                                <li>政治条件合格，身体条件符合军队院校招收学员体格检查标准</li>
+                            </ul>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg mt-3">
+                            <h4 class="font-bold text-secondary mb-2">考试内容</h4>
+                            <ul class="list-disc list-inside space-y-1">
+                                <li>文化科目：语文、数学、综合（政治、物理、化学）、英语</li>
+                                <li>军事科目：共同科目（队列、步枪操作、战术基础动作等）</li>
+                                <li>录取原则：按文化成绩+军事成绩综合排名，择优录取</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <button class="w-full bg-primary text-white py-2 rounded-lg hover:bg-primary/90 transition-colors" onclick="openModal('examCourse')">
+                        预约考学辅导课程
+                    </button>
+                </div>
+
+                <!-- 提干政策 -->
+                <div class="bg-neutral rounded-xl shadow-md p-6">
+                    <div class="flex items-center mb-6">
+                        <i class="fa fa-trophy text-primary text-3xl mr-4"></i>
+                        <h3 class="text-xl font-bold text-secondary">大学生士兵提干政策</h3>
+                    </div>
+                    <button onclick="toggleExam('exam-2')" class="text-primary font-medium flex items-center mb-4">
+                        查看详细政策 <i class="fa fa-angle-down ml-1"></i>
+                    </button>
+                    <div id="exam-2" class="hidden text-gray-700 space-y-3">
+                        <div class="bg-white p-4 rounded-lg">
+                            <h4 class="font-bold text-secondary mb-2">提干条件</h4>
+                            <ul class="list-disc list-inside space-y-1">
+                                <li>全日制本科以上学历且取得学位的毕业生士兵</li>
+                                <li>年龄不超过26周岁，其中三本毕业生不超过25周岁</li>
+                                <li>入伍1年半以上，且在推荐的旅（团）级单位工作半年以上</li>
+                                <li>现实表现优秀，被评为优秀士兵或受到旅（团）级以上单位表彰</li>
+                            </ul>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg mt-3">
+                            <h4 class="font-bold text-secondary mb-2">选拔流程</h4>
+                            <ul class="list-disc list-inside space-y-1">
+                                <li>个人申请 → 基层推荐 → 旅（团）级考核 → 军级审核</li>
+                                <li>全军统一考试：军事职业能力考核 + 综合知识与能力考试</li>
+                                <li>体检、政审 → 公示 → 录取培训</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <button class="w-full bg-primary text-white py-2 rounded-lg hover:bg-primary/90 transition-colors" onclick="openModal('promoteCourse')">
+                        预约提干辅导课程
+                    </button>
+                </div>
+            </div>
+
+            <!-- 考学提干辅导课程 -->
+            <div class="bg-secondary/5 rounded-xl shadow-md p-6">
+                <h3 class="text-xl font-bold text-secondary mb-4 text-center">考学提干辅导课程</h3>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-white p-4 rounded-lg">
+                        <h4 class="font-bold text-primary mb-2">考学辅导课程</h4>
+                        <ul class="text-gray-700 space-y-2">
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-primary mt-1 mr-2"></i>
+                                <span>文化课系统辅导：语文、数学、英语、综合科目</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-primary mt-1 mr-2"></i>
+                                <span>军事科目专项训练：队列、战术、射击等</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-primary mt-1 mr-2"></i>
+                                <span>历年真题讲解 + 模拟考试 + 错题分析</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-primary mt-1 mr-2"></i>
+                                <span>课程费用：¥1980/人（含教材+模拟题）</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg">
+                        <h4 class="font-bold text-primary mb-2">提干辅导课程</h4>
+                        <ul class="text-gray-700 space-y-2">
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-primary mt-1 mr-2"></i>
+                                <span>军事职业能力考核专项辅导</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-primary mt-1 mr-2"></i>
+                                <span>综合知识与能力考试系统讲解</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-primary mt-1 mr-2"></i>
+                                <span>面试技巧 + 政审材料准备指导</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-primary mt-1 mr-2"></i>
+                                <span>课程费用：¥2580/人（含资料+一对一指导）</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 板块六：国防教育研学课程 -->
+    <section id="research-courses" class="py-16 bg-secondary/5">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-primary mb-4">国防教育研学体验课程</h2>
+                <div class="w-20 h-1 bg-accent mx-auto"></div>
+                <p class="mt-4 text-gray-700 max-w-2xl mx-auto">
+                    走进云南红色热土，沉浸式体验国防教育，传承红色基因
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <!-- 一日课程 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="relative">
+                        <img src="yiriyou.jpg" alt="一日西南联大+陆军讲武堂游" class="w-full h-48 object-cover">
+                        <div class="absolute top-4 right-4 bg-accent text-secondary px-3 py-1 rounded-lg font-bold">
+                            ¥38/人
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-secondary mb-2">一日西南联大+陆军讲武堂游</h3>
+                        <ul class="text-gray-700 mb-6 space-y-2">
+                            <li class="flex items-start">
+                                <i class="fa fa-map-marker text-primary mt-1 mr-2"></i>
+                                <span>西南联大旧址参观学习</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-map-marker text-primary mt-1 mr-2"></i>
+                                <span>云南陆军讲武堂历史讲解</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-craft text-primary mt-1 mr-2"></i>
+                                <span>亲手制作属于自己的西南联大印章</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-graduation-cap text-primary mt-1 mr-2"></i>
+                                <span>红色文化主题分享会</span>
+                            </li>
+                        </ul>
+                        <button class="w-full bg-primary text-white py-2 rounded-lg hover:bg-primary/90 transition-colors" onclick="openModal('oneDay')">
+                            立即预约
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 三日课程 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="relative">
+                        <img src="sanriyou.jpg" alt="三日云南红色景点游" class="w-full h-48 object-cover">
+                        <div class="absolute top-4 right-4 bg-accent text-secondary px-3 py-1 rounded-lg font-bold">
+                            ¥428/人
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-secondary mb-2">三日云南红色景点游</h3>
+                        <ul class="text-gray-700 mb-6 space-y-2">
+                            <li class="flex items-start">
+                                <i class="fa fa-map-marker text-primary mt-1 mr-2"></i>
+                                <span>昆明抗战纪念馆参观</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-map-marker text-primary mt-1 mr-2"></i>
+                                <span>曲靖红军长征纪念馆学习</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-map-marker text-primary mt-1 mr-2"></i>
+                                <span>楚雄滇西抗战遗址考察</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-book text-primary mt-1 mr-2"></i>
+                                <span>红色主题研学分享</span>
+                            </li>
+                        </ul>
+                        <button class="w-full bg-primary text-white py-2 rounded-lg hover:bg-primary/90 transition-colors" onclick="openModal('threeDay')">
+                            立即预约
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 五日课程 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="relative">
+                        <img src="wuriyou.jpg" alt="五日重走西南联大路" class="w-full h-48 object-cover">
+                        <div class="absolute top-4 right-4 bg-accent text-secondary px-3 py-1 rounded-lg font-bold">
+                            ¥688/人
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-secondary mb-2">五日重走西南联大路</h3>
+                        <ul class="text-gray-700 mb-6 space-y-2">
+                            <li class="flex items-start">
+                                <i class="fa fa-map-marker text-primary mt-1 mr-2"></i>
+                                <span>昆明西南联大纪念馆</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-map-marker text-primary mt-1 mr-2"></i>
+                                <span>蒙自西南联大分校旧址</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-map-marker text-primary mt-1 mr-2"></i>
+                                <span>建水西南联大办学点</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-flag text-primary mt-1 mr-2"></i>
+                                <span>重走联大迁徙路体验</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-pencil text-primary mt-1 mr-2"></i>
+                                <span>红色研学成果展示</span>
+                            </li>
+                        </ul>
+                        <button class="w-full bg-primary text-white py-2 rounded-lg hover:bg-primary/90 transition-colors" onclick="openModal('fiveDay')">
+                            立即预约
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 预约弹窗 -->
+    <div id="bookingModal" class="fixed inset-0 bg-black/50 flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-xl shadow-2xl w-full max-w-md mx-4 transform transition-all scale-95 opacity-0" id="modalContent">
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="text-xl font-bold text-secondary" id="modalTitle">预约课程</h3>
+                    <button class="text-gray-500 hover:text-gray-700" onclick="closeModal()">
+                        <i class="fa fa-times text-xl"></i>
+                    </button>
+                </div>
+                
+                <form id="bookingForm" class="space-y-4">
+                    <input type="hidden" id="courseType" value="">
+                    
+                    <div>
+                        <label class="block text-gray-700 mb-1" for="bookingName">联系人</label>
+                        <input type="text" id="bookingName" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50" placeholder="请输入您的姓名" required>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-gray-700 mb-1" for="bookingPhone">联系电话</label>
+                        <input type="tel" id="bookingPhone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50" placeholder="请输入您的手机号码" pattern="^1[3-9]\d{9}$" required>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-gray-700 mb-1" for="bookingNumber">预约人数</label>
+                        <input type="number" id="bookingNumber" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50" min="1" value="1" required>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-gray-700 mb-1" for="bookingDate">预约日期</label>
+                        <input type="date" id="bookingDate" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50" required>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-gray-700 mb-1" for="bookingRemark">备注信息（选填）</label>
+                        <textarea id="bookingRemark" rows="3" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50" placeholder="请输入其他需要说明的信息"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="w-full bg-primary text-white py-3 rounded-lg hover:bg-primary/90 transition-colors font-medium">
+                        提交预约
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- 成功提示弹窗 -->
+    <div id="successModal" class="fixed inset-0 bg-black/50 flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-xl shadow-2xl w-full max-w-sm mx-4 p-6 text-center">
+            <div class="text-4xl text-green-500 mb-4">
+                <i class="fa fa-check-circle"></i>
+            </div>
+            <h3 class="text-xl font-bold text-secondary mb-2">预约成功！</h3>
+            <p class="text-gray-700 mb-6">我们将尽快与您联系确认预约信息</p>
+            <button class="w-full bg-primary text-white py-2 rounded-lg hover:bg-primary/90 transition-colors" onclick="closeSuccessModal()">
+                确定
+            </button>
+        </div>
+    </div>
+
+    <!-- 页脚 -->
+    <footer class="bg-secondary text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <i class="fa fa-flag text-accent mr-2"></i> 戎耀云岭·薪火相传
+                    </h3>
+                    <p class="text-gray-300 mb-4">
+                        退伍大学生红色国防教育创新平台，传承红色基因，筑牢国防根基，为新时代国防教育贡献青春力量。
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-white hover:text-accent transition-colors"><i class="fa fa-weixin text-xl"></i></a>
+                        <a href="#" class="text-white hover:text-accent transition-colors"><i class="fa fa-weibo text-xl"></i></a>
+                        <a href="#" class="text-white hover:text-accent transition-colors"><i class="fa fa-phone text-xl"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">快速链接</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="#policy" class="hover:text-accent transition-colors">入伍政策</a></li>
+                        <li><a href="#red-stories" class="hover:text-accent transition-colors">红色故事</a></li>
+                        <li><a href="#military-heroes" class="hover:text-accent transition-colors">军人代表</a></li>
+                        <li><a href="#skill-training" class="hover:text-accent transition-colors">技能学习</a></li>
+                        <li><a href="#exam-promotion" class="hover:text-accent transition-colors">考学提干</a></li>
+                        <li><a href="#research-courses" class="hover:text-accent transition-colors">研学课程</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">联系我们</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li class="flex items-start">
+                            <i class="fa fa-map-marker mt-1 mr-3 text-accent"></i>
+                            <span>云南省昆明市五华区云南师范大学</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-phone mt-1 mr-2 text-accent"></i>
+                            <span>13678734689</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-envelope mt-1 mr-2 text-accent"></i>
+                            <span>2530602646@qq.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="mt-8 pt-8 border-t border-gray-700 text-center text-gray-400">
+                <p>© 2026 戎耀云岭·薪火相传 - 退伍大学生红色国防教育创新平台 版权所有</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // 导航栏滚动效果
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('py-2');
+                navbar.classList.remove('py-3');
+            } else {
+                navbar.classList.add('py-3');
+                navbar.classList.remove('py-2');
+            }
+        });
+
+        // 移动端菜单切换
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        menuBtn.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+            const icon = menuBtn.querySelector('i');
+            if (icon.classList.contains('fa-bars')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // 关闭移动端菜单
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                        const icon = menuBtn.querySelector('i');
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars');
+                    }
+                }
+            });
+        });
+
+        // 故事展开/收起
+        function toggleStory(id) {
+            const el = document.getElementById(id);
+            el.classList.toggle('hidden');
+        }
+
+        // 英雄事迹展开/收起
+        function toggleHero(id) {
+            const el = document.getElementById(id);
+            el.classList.toggle('hidden');
+        }
+
+        // 技能课程展开/收起
+        function toggleSkill(id) {
+            const el = document.getElementById(id);
+            el.classList.toggle('hidden');
+        }
+
+        // 考学提干政策展开/收起
+        function toggleExam(id) {
+            const el = document.getElementById(id);
+            el.classList.toggle('hidden');
+        }
+
+        // 新增：查看全部按钮点击事件（预留扩展接口）
+        function showAllStories() {
+            alert('更多红色故事正在更新中，敬请期待！');
+            // 后续可扩展：跳转到全部红色故事页面或加载更多内容
+        }
+
+        function showAllHeroes() {
+            alert('更多军人典型故事正在更新中，敬请期待！');
+            // 后续可扩展：跳转到全部军人故事页面或加载更多内容
+        }
+
+        function showAllSkills() {
+            alert('更多技能培训课程正在更新中，敬请期待！');
+            // 后续可扩展：跳转到全部技能课程页面或加载更多内容
+        }
+
+        // 预约弹窗功能
+        const bookingModal = document.getElementById('bookingModal');
+        const modalContent = document.getElementById('modalContent');
+        const successModal = document.getElementById('successModal');
+        const bookingForm = document.getElementById('bookingForm');
+        
+        function openModal(courseType) {
+            // 设置课程类型
+            document.getElementById('courseType').value = courseType;
+            
+            // 设置弹窗标题
+            let title = '';
+            switch(courseType) {
+                case 'oneDay':
+                    title = '预约：一日西南联大+陆军讲武堂游';
+                    break;
+                case 'threeDay':
+                    title = '预约：三日云南红色景点游';
+                    break;
+                case 'fiveDay':
+                    title = '预约：五日重走西南联大路';
+                    break;
+                case 'photography':
+                    title = '预约：摄影培训课程（免费）';
+                    break;
+                case 'news':
+                    title = '预约：新闻稿件培训课程（免费）';
+                    break;
+                case 'video':
+                    title = '预约：视频剪辑培训课程（免费）';
+                    break;
+                case 'examCourse':
+                    title = '预约：考学辅导课程';
+                    break;
+                case 'promoteCourse':
+                    title = '预约：提干辅导课程';
+                    break;
+                default:
+                    title = '预约课程';
+            }
+            document.getElementById('modalTitle').textContent = title;
+            
+            // 显示弹窗
+            bookingModal.classList.remove('hidden');
+            setTimeout(() => {
+                modalContent.classList.remove('scale-95', 'opacity-0');
+                modalContent.classList.add('scale-100', 'opacity-100');
+            }, 10);
+            
+            // 设置最小日期为今天
+            const today = new Date().toISOString().split('T')[0];
+            document.getElementById('bookingDate').min = today;
+        }
+        
+        function closeModal() {
+            modalContent.classList.remove('scale-100', 'opacity-100');
+            modalContent.classList.add('scale-95', 'opacity-0');
+            setTimeout(() => {
+                bookingModal.classList.add('hidden');
+            }, 300);
+        }
+        
+        function closeSuccessModal() {
+            successModal.classList.add('hidden');
+            // 重置表单
+            bookingForm.reset();
+        }
+        
+        // 表单提交处理
+        bookingForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // 这里可以添加表单验证和提交逻辑
+            // 实际项目中需要连接后端API
+            
+            // 关闭预约弹窗
+            closeModal();
+            
+            // 显示成功弹窗
+            setTimeout(() => {
+                successModal.classList.remove('hidden');
+            }, 300);
+        });
+
+        // 点击弹窗外部关闭
+        bookingModal.addEventListener('click', function(e) {
+            if (e.target === bookingModal) {
+                closeModal();
+            }
+        });
+        
+        successModal.addEventListener('click', function(e) {
+            if (e.target === successModal) {
+                closeSuccessModal();
+            }
+        });
+    </script>
+</body>
+</html>
